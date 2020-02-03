@@ -1,0 +1,14 @@
+version: '2.2'
+services:
+  nodejs:
+    image: express-app-testing-demo
+    hostname: nodejs
+    restart: unless-stopped
+    ports:
+      - "5000:3000"
+    # env_file:
+    #   - ./app.env
+    networks: 
+      - app
+networks:
+  app:
